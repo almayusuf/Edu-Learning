@@ -1,0 +1,43 @@
+ 1003  sudo yum install epel-release -y
+ 1004  sudo amazon-linux-extras install epel
+ 1005  sudo systemctl start jenkins
+ 1006  sudo yum install jenkins java-1.8.0-openjdk-devel -y
+ 1007  sudo systemctl start jenkins
+ 1008  sudo systemctl enable jenkins
+ 1009  sudo dnf install chkconfig java-devel
+ 1010  sudo systemctl daemon-reload
+ 1011  sudo systemctl start jenkins
+ 1012  sudo systemctl status jenkins
+
+
+ yum install java-1.8* -y
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+sudo yum upgrade
+sudo yum install epel-release java-11-openjdk-devel
+sudo yum install jenkins
+sudo systemctl daemon-reload
+service jenkins start
+service jenkins status
+
+
+
+
+
+
+
+ 84  wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+   85  rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+   86  yum  install chkconfig java-devel
+   87  yum install jenkins
+   88  yum install epel-release java-11-openjdk-devel
+   89  sudo yum install epel-release java-11-openjdk-devel
+   90  sudo amazon-linux-extras install epel
+   91  yum install jenkins
+   92  systemctl daemon-reload
+   93  service jenkins start
+   94  service jenkins status
+
+
+   
